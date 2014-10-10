@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :admin do
 
     # 首頁新聞管理
-    resources :news, :only => [:new, :edit, :destroy]
+    resources :news, :only => [:new, :edit, :destroy, :create]
   end
 
   # Example of regular route:

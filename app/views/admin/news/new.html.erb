@@ -1,3 +1,13 @@
 <div class="container section-admin">
-
+  <h3>新增新聞</h3>
+  <%= simple_form_for [:admin, @news] do |n| %>
+    <%= n.input :title, :label => "標題" %>
+    <%= n.input :img, :label => "重點圖片" %>
+    <div class="form-groupe">
+      <label for="news_content">新聞內容</label>
+      <%= n.text_area :content, :class => "form-control", :rows => "10", :label => "標題" %>
+    </div>
+    <br>
+    <%= n.button :submit, '確定新增', :class => "btn btn-primary pull-right" %>
+  <% end %>
 </div>

@@ -43,3 +43,4 @@ gem 'bower-rails'
 gem 'modernizr-rails'
 gem 'better_errors'
 gem 'guard-livereload', group: :development
+gem 'simple_form'
