@@ -23,5 +23,6 @@ module Pas36Rails
     # adding bower path for asset pipeline
     config.assets.paths << Rails.root.join("vendor","assets","bower_components")
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components","fontawesome","fonts")
   end
 end
