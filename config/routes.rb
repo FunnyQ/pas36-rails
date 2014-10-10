@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
     # 首頁新聞管理
     resources :news, :only => [:new, :edit, :destroy, :create, :update]
-    resources :about#, :only => [:edit, :index, :update]
+    resources :abouts#, :only => [:edit, :index, :update]
   end
 
   # Example of regular route:

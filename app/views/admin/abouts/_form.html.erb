@@ -1,0 +1,12 @@
+  <%= simple_form_for [:admin, @abouts] do |n| %>
+    <%= n.input :title, :label => "副標題" %>
+    <%= n.input :anchor, :label => "錨點" %>
+    <%= n.input :pic, :label => "重點圖片" %>
+    <div class="form-groupe">
+      <label for="news_content">新聞內容</label>
+      <%= n.text_area :content, :class => "form-control", :rows => "10", :label => "標題" %>
+    </div>
+    <br>
+    <%= n.button :submit, '送出資料', :class => "btn btn-primary pull-right" %>
+    <%= link_to( '取消', admin_abouts_path, :class => "btn btn-default pull-right") %>
+  <% end %>

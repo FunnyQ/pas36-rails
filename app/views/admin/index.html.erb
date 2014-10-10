@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @news.each do |news| %>
+        <% @news.order("created_at desc").each do |news| %>
         <tr>
           <td><%= news.updated_at.strftime("%Y/%m/%d") %></td>
           <td><%= news.title %></td>
@@ -20,7 +20,7 @@
             <%= link_to(edit_admin_news_path(news), :class => "btn btn-warning") do %>
               <i class="fa fa-edit"></i> 編輯
             <% end %>
-            <%= link_to(admin_news_path(news), :class => "btn btn-danger", :method => :delete, :confirm => "確定刪除產品？") do %>
+            <%= link_to(admin_news_path(news), :class => "btn btn-danger", :confirm => "確定刪除這則新聞？", :method => :delete) do %>
               <i class="fa fa-remove"></i> 刪除
             <% end %>
 
