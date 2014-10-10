@@ -44,3 +44,8 @@ gem 'modernizr-rails'
 gem 'better_errors'
 gem 'guard-livereload', group: :development
 gem 'simple_form'
+gem 'will_paginate'
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'dropzonejs-rails'
