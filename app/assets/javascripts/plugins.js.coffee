@@ -15,12 +15,12 @@
 ## -------------------------------------
 ##   jQuery / helper plugins
 ## -------------------------------------
-#= require vendor/_bootstrap
 #= require jquery/dist/jquery
 #= require jquery_ujs
-#= require turbolinks
+#= require vendor/_bootstrap
 #= require "vendor/_lightview"
 #= require "vendor/_slider"
 #= require "vendor/_smoothScroll"
 #= require "vendor/_pushy"
+#= require turbolinks
 
