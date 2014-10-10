@@ -1,0 +1,12 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "jquery": "latest",
+    "susy": "latest",
+    "fontawesome": "latest",
+    "breakpoint-sass": "latest",
+    "sassy-buttons": "latest",
+    "modernizr": "latest",
+    "bootstrap-sass-official": "latest"
+  }
+}
