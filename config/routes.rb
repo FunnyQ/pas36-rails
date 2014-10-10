@@ -5,7 +5,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'f2e#index'
 
-  resources :admin
+  # 後台
+  resources :admin, :only => [:index]
+
+  namespace :admin do
+
+    # 首頁新聞管理
+    resources :news, :only => [:new, :edit, :destroy]
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
