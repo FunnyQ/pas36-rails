@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'f2e#index'
+
+  # 前台
+  root 'front#index'
+  get '/about', :to => 'front#about'
+
+
 
   # 後台
   resources :admin, :only => [:index]
