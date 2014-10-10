@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 
 gem 'bower-rails'
 gem 'better_errors'
+gem 'guard-livereload', group: :development
