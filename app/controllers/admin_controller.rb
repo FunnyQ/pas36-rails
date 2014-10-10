@@ -5,5 +5,8 @@ class AdminController < ApplicationController
   def index
     @news = News.all
   end
+  def about
+
+  end
 
 end
