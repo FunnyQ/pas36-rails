@@ -1,0 +1,41 @@
+<!-- show/news.html -->
+
+  <!-- content area -->
+  <div class="show_main_content">
+    <div class="container">
+      <div class="news_list-wrapper">
+
+        <h2>最新消息</h2>
+
+        <% @news.each do |f| %>
+          <!-- news unit -->
+
+          <!-- /system edit buttons -->
+          <!-- <a href="#" class="edit">編輯</a> <a href="#" class="delete">刪除</a> -->
+
+          <a href="<%= news_path(f) %>" class="unit curl-top-right trans-05s">
+
+            <!-- left for feature pic -->
+            <div class="left">
+              <img class="img-responsive" src="../<%= f.img %>" alt="">
+            </div>
+
+            <!-- right for detail info -->
+            <div class="right">
+              <div class="date">
+                <span>◎ <%= f.updated_at.strftime("%Y/%m/%d") %></span>
+              </div>
+              <div class="title">
+                <h3><%= f.title %></h3>
+              </div>
+              <div class="summary only-desktop-up">
+                <p><%= truncate(strip_tags(f.content.html_safe), :length => 150) %></p>
+              </div>
+            </div>
+          </a>
+        <% end %>
+        <%= will_paginate @posts %>
+
+      </div>
+    </div>
+  </div>

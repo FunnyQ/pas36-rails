@@ -25,3 +25,31 @@ en:
     no_images_uploaded: There are currently no uploaded images.
     js:
       alert_unsaved: You have unsaved changes.
+
+zh-TW:
+  bootsy:
+    action:
+      refresh: 更新
+      destroy: 刪除
+      close: 關閉
+      load: 讀取
+      upload: 上傳新圖片
+    image_gallery: 已上傳圖庫
+    image:
+      s: 圖片
+      p: 圖片
+      size: 尺寸
+      large: 大型
+      medium: 中型
+      small: 小型
+      original: 原始尺寸
+      new: 新圖片
+      confirm:
+        destroy: 您確定要刪除這張照片嗎？
+      position:
+        left: 文繞圖靠左
+        right: 文繞圖靠右
+        inline: 放於文字中
+    no_images_uploaded: 目前尚未有已上傳的圖片。
+    js:
+      alert_unsaved: 您有尚未存檔的內容

@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+zh-TW:
+  will_paginate:
+    previous_label: "&#8592; 上一頁"
+    next_label: "下一頁 &#8594;"
+    page_gap: "&hellip;"
