@@ -6,6 +6,19 @@
 # *************************************
 #= require plugins
 
+`
+$(document).on('page:load', function(){
+  window['rangy'].initialized = false
+})
+  $(document).ready(function(){
+
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+`
+
 `// Slider blocks`
 indexSlider = $('.index_slider .nivoSlider')
 courseSlider = $('.course_slider .nivoSlider')

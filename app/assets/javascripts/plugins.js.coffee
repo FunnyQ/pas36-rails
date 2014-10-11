@@ -22,5 +22,6 @@
 #= require "vendor/_slider"
 #= require "vendor/_smoothScroll"
 #= require "vendor/_pushy"
+#= require bootstrap-wysihtml5
 #= require turbolinks
 
