@@ -8,4 +8,12 @@ class FrontController < ApplicationController
     @abouts = About.all
   end
 
+  def spaces
+
+  end
+
+  def downloads
+
+  end
+
 end

@@ -39,7 +39,7 @@ class Admin::NewsController < ApplicationController
   private
 
   def news_params
-    params.require(:news).permit(:title, :img, :content)
+    params.require(:news).permit(:title, :img, :content, :bootsy_image_gallery_id)
   end
 
 end

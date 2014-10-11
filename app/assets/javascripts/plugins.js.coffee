@@ -18,10 +18,11 @@
 #= require jquery/dist/jquery
 #= require jquery_ujs
 #= require vendor/_bootstrap
+#= require bootsy
 #= require "vendor/_lightview"
 #= require "vendor/_slider"
 #= require "vendor/_smoothScroll"
 #= require "vendor/_pushy"
-#= require bootstrap-wysihtml5
-#= require turbolinks
+
+
 

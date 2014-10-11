@@ -25,11 +25,13 @@
     <div class="container">
       <!-- 最新消息 -->
       <div class="index_news">
-        <a href="show/news_list.html" class="index_news-title trans-05s"><i class="fa fa-circle"></i> 最新消息 <span>more ></span></a>
+        <%= link_to(news_index_path, :class => "index_news-title trans-05s") do %>
+          <i class="fa fa-circle"></i> 最新消息 <span>more ></span>
+        <% end %>
         <div class="index_news-inner">
 
           <% @news.order("created_at desc").take(5).each do |f| %>
-          <a href="<%= admin_news_path(f) %>" class="unit curl-top-right trans-05s">
+          <a href="<%= news_path(f) %>" class="unit curl-top-right trans-05s">
 
             <!-- left for feature pic -->
             <div class="left">
@@ -45,7 +47,8 @@
                 <h3><%= f.title %></h3>
               </div>
               <div class="summary only-desktop-up">
-                <p><%= f.content %></p>
+                <p><%= truncate(strip_tags(f.content.html_safe), :length => 150) %></p>
+                <br><span class="more">more</span>
               </div>
             </div>
           </a>

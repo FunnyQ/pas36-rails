@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -6,7 +7,12 @@ Rails.application.routes.draw do
 
   # 前台
   root 'front#index'
+
+  resources :news, :only => [:index, :show]
+
   get '/about', :to => 'front#about'
+  get '/spaces', :to => 'front#spaces'
+  get '/downloads', :to => 'front#downloads'
 
 
 

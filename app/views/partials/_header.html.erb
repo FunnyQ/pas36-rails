@@ -15,12 +15,14 @@
               <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
             </span>
 </a>
-<a class="trans-05s" href="/">
+
+          <%= link_to( root_path, :class => "trans-05s") do %>
             <span class="fa-stack fa-lg">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-home fa-stack-1x fa-inverse"></i>
             </span>
-</a>          <span> </span>
+          <% end %>
+          <span> </span>
           <a class="" href="#"> subscribe <span> | </span>訂閱電子報</a> | <a href="/contact.html">聯絡我們</a>
         </div>
 
@@ -56,8 +58,8 @@
       <nav>
         <ul>
           <!-- navi contents -->
-          <li><a class="" href="/about.html">關於我們</a></li>
-          <li><a class="" href="/spaces.html">場地租借</a></li>
+          <li><%= link_to('關於我們', about_path)%></li>
+          <li><%= link_to('場地租借', spaces_path)%></li>
           <li><a class="" href="/courses.html">課程活動</a></li>
           <li><a class="" href="/about.html#tour">參訪體驗</a></li>
           <li><a class="" href="/activities.html">活動花絮</a></li>

@@ -431,8 +431,10 @@ button::-moz-focus-inner
     border-bottom: 1px solid $c-about-title-border
     border-top: 1px solid $c-about-title-border
   img
-    margin: 0 auto
-    margin-bottom: 0.5em
+    width: 100%
+    margin: 0.5em auto
+    border: 5px solid #fff
+    +box-shadow(0 0 2px darken($c-border, 20%))
   .content
     color: $c-grey
     +container(600px)
