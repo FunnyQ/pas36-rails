@@ -27,3 +27,6 @@ zh-TW:
     previous_label: "&#8592; 上一頁"
     next_label: "下一頁 &#8594;"
     page_gap: "&hellip;"
+  errors:
+    messages:
+      blank: "此欄位為必填，請檢查後再送出資料"

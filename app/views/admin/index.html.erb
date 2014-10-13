@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @news.order("created_at desc").each do |news| %>
+        <% @news.each do |news| %>
         <tr>
           <td><%= news.updated_at.strftime("%Y/%m/%d") %></td>
           <td><%= news.title %></td>
@@ -27,8 +27,10 @@
           </td>
         </tr>
         <% end %>
+
       </tbody>
     </table>
+    <%= will_paginate @news, :class => "text-center"%>
 </div>
 
 <div class="container section-admin">

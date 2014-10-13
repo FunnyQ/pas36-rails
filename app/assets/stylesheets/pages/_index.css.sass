@@ -38,7 +38,7 @@ button::-moz-focus-inner
   .header_top
     text-align: left
     background-color: $c-header-top
-    // background: url(../img/asset/header-top-bg.jpg) center 0 repeat-x
+    // background: url(asset/header-top-bg.jpg) center 0 repeat-x
     border-bottom: 3px solid $c-banner-top-border
     +box-shadow(0 2px 0 #fff, 0 4px 0 $c-banner-top-border)
     font-size: 10px
@@ -295,7 +295,7 @@ button::-moz-focus-inner
     margin: 0
     // background-image: image-url("asset/exclusive_paper.png")
     background-color: #fbfbfb
-    +image-2x("../img/asset/exclusive_paper_@2X.png", 560px, 420px)
+    +image-2x("asset/exclusive_paper_@2X.png", 560px, 420px)
 
 .index_main-inner
   background-color: $c-background
@@ -599,7 +599,7 @@ button::-moz-focus-inner
     h3
       font-size: $fz-xl
     #templatemo_timeline .container-fluid
-      background: url("../img/time_line_bg.jpg") repeat-y center top
+      background: url("time_line_bg.jpg") repeat-y center top
     #templatemo_timeline .right_timer span
       display: block
 #templatemo_timeline
@@ -706,8 +706,11 @@ button::-moz-focus-inner
     +breakpoint($b-mobile)
       +container(600px)
   .show_text
+    padding: 1em 0
     +breakpoint($b-mobile)
       +container(600px)
+    img
+      width: 100%
   .navi-buttons
     width: 100%
     +clearfix

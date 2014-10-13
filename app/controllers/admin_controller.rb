@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   layout "admin"
 
   def index
-    @news = News.all
+    @news = News.all.recent.paginate(:page => params[:page], :per_page => 5)
   end
   def about
 

@@ -1,0 +1,31 @@
+  <!-- content area -->
+  <div class="show_main_content">
+    <div class="container">
+      <div class="zen_main-wrapper">
+
+        <!-- title -->
+        <h3><%= @news.title %></h3>
+
+        <div class="banner-divider"></div>
+
+        <!-- content -->
+
+        <div class="show_text">
+          <%= @news.content.html_safe %>
+        </div>
+
+        <div class="navi-buttons">
+          <div class="back">
+            <%= link_to news_index_path do %>
+              <button>回到列表</button>
+            <% end %>
+          </div>
+          <div class="next">
+            <%= link_to @news.previous do %>
+              <button>下一則</button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

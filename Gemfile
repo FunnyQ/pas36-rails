@@ -48,6 +48,5 @@ gem 'will_paginate'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem "rails-uploader"
 gem 'bootsy'
 # gem 'bootstrap-wysihtml5-rails'

@@ -30,7 +30,7 @@
         <% end %>
         <div class="index_news-inner">
 
-          <% @news.order("created_at desc").take(5).each do |f| %>
+          <% @news.recent_5.each do |f| %>
           <a href="<%= news_path(f) %>" class="unit curl-top-right trans-05s">
 
             <!-- left for feature pic -->
@@ -41,7 +41,7 @@
             <!-- right for detail info -->
             <div class="right">
               <div class="date">
-                <span>◎ <%= f.updated_at.strftime("%Y/%m/%d") %></span>
+                <span>◎ <%= f.date_formate %></span>
               </div>
               <div class="title">
                 <h3><%= f.title %></h3>
