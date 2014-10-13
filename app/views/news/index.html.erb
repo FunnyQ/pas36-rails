@@ -34,8 +34,9 @@
             </div>
           </a>
         <% end %>
-        <%= will_paginate @posts %>
-
+        <div class="text-center">
+          <%= will_paginate @sliders, :renderer => BootstrapPagination::Rails %>
+        </div>
       </div>
     </div>
   </div>
