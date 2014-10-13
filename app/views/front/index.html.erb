@@ -3,15 +3,7 @@
   <div class="index_slider">
     <div class="container">
 
-      <!-- slider block -->
-      <ul class="bxslider">
-        <% @sliders.recent.each do |s| %>
-          <li>
-            <%= index_slider_content_front(s) %>
-          </li>
-        <% end %>
-      </ul>
-
+      <%= render :partial => "partials/index_slider" %>
 
       <div class="banner-divider"></div>
 
@@ -24,9 +16,11 @@
     <div class="container">
       <!-- 最新消息 -->
       <div class="index_news">
+
         <%= link_to(news_index_path, :class => "index_news-title trans-05s") do %>
           <i class="fa fa-circle"></i> 最新消息 <span>more ></span>
         <% end %>
+
         <div class="index_news-inner">
 
           <% @news.recent_5.each do |f| %>
