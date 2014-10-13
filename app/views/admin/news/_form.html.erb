@@ -1,6 +1,7 @@
   <%= simple_form_for [:admin, @news] do |n| %>
     <%= n.input :title, :label => "標題" %>
-    <%= n.input :img, :label => "重點圖片" %>
+    <%= n.input :img, :label => "重點圖片", :as => :file %>
+    <%= image_tag @news.img if @news.img? %>
     <div class="form-groupe">
       <label for="news_content">新聞內容</label>
       <%= n.bootsy_area :content, :class => "form-control", :rows => "35", :label => "標題" %>
