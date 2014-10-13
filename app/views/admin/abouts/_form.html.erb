@@ -1,7 +1,6 @@
   <%= simple_form_for [:admin, @abouts] do |n| %>
     <%= n.input :title, :label => "副標題" %>
     <%= n.input :anchor, :label => "錨點" %>
-    <%= n.input :pic, :label => "重點圖片" %>
     <div class="form-group">
       <label for="news_content">新聞內容</label>
       <%= n.bootsy_area :content, :class => "form-control", :rows => "35", :label => "標題" %>

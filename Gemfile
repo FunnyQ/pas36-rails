@@ -48,6 +48,6 @@ gem 'will_paginate'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'dropzonejs-rails'
+gem "rails-uploader"
 gem 'bootsy'
 # gem 'bootstrap-wysihtml5-rails'
