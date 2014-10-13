@@ -23,8 +23,15 @@ Rails.application.routes.draw do
 
   namespace :admin do
 
+    # 首頁 Slider 管理
+    resources :index_sliders, :only => [:edit, :destroy, :create, :update]
+    get '/index_sliders/new_image', :to => 'index_sliders#image'
+    get '/index_sliders/new_link', :to => 'index_sliders#link'
+
     # 首頁新聞管理
     resources :news, :only => [:new, :edit, :destroy, :create, :update]
+
+    # 關於我們管理
     resources :abouts#, :only => [:edit, :index, :update]
   end
 

@@ -182,6 +182,15 @@ button::-moz-focus-inner
   .bx-wrapper .bx-viewport
     border: $polaroid solid #fff
     +box-shadow(0 0 1px darken($c-border,25%))
+  .video-wrapper
+    width: 100%
+    height: 129px
+    +breakpoint($b-mobile)
+      height: 321px
+    +breakpoint($b-pad)
+      height: 404px
+    +breakpoint($b-desktop)
+      height: 541px
 .banner-divider
   margin-top: $polaroid
   width: 100%

@@ -1,5 +1,6 @@
 class News < ActiveRecord::Base
   include Bootsy::Container
+
   mount_uploader :img, NewscoverUploader
 
   scope :recent, -> { order("created_at desc") }

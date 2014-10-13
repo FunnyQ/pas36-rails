@@ -2,6 +2,7 @@ class FrontController < ApplicationController
 
   def index
     @news = News.all
+    @sliders = IndexSlider.all
   end
 
   def about

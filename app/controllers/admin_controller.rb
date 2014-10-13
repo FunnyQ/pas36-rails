@@ -4,6 +4,7 @@ class AdminController < ApplicationController
 
   def index
     @news = News.all.recent.paginate(:page => params[:page], :per_page => 5)
+    @sliders = IndexSlider.all.recent.paginate(:page => params[:page], :per_page => 5)
   end
   def about
 

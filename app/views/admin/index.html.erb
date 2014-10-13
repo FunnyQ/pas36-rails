@@ -1,4 +1,42 @@
 <div class="container section-admin">
+  <h3>首頁 Slider 管理</h3>
+  <%= link_to(admin_index_sliders_new_image_path, :class => "btn btn-primary") do %>
+    <i class="fa fa-plus"></i> 新增圖片
+  <% end %>
+  <%= link_to(admin_index_sliders_new_link_path, :class => "btn btn-primary") do %>
+    <i class="fa fa-plus"></i> 新增影片連結
+  <% end %>
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>更新日期</th>
+          <th>Slider 內容</th>
+          <th class="text-center">管理選項</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sliders.each do |slider| %>
+        <tr>
+          <td><%= slider.date_formate %></td>
+          <td><%= index_slider_content_admin(slider) %></td>
+          <td class="text-center vcenter">
+            <%= link_to(edit_admin_index_slider_path(slider), :class => "btn btn-warning") do %>
+              <i class="fa fa-edit"></i> 編輯
+            <% end %>
+            <%= link_to(admin_index_slider_path(slider), :class => "btn btn-danger", :method => :delete, :data => {confirm: "您確定要刪除這則新聞嗎？"}) do %>
+              <i class="fa fa-remove"></i> 刪除
+            <% end %>
+
+          </td>
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+    <%= will_paginate @news, :class => "text-center"%>
+</div>
+
+<div class="container section-admin">
   <h3>最新消息管理</h3>
   <%= link_to(new_admin_news_path, :class => "btn btn-primary") do %>
     <i class="fa fa-plus"></i> 新增最新消息
@@ -14,7 +52,7 @@
       <tbody>
         <% @news.each do |news| %>
         <tr>
-          <td><%= news.updated_at.strftime("%Y/%m/%d") %></td>
+          <td><%= news.date_formate %></td>
           <td><%= news.title %></td>
           <td class="text-center">
             <%= link_to(edit_admin_news_path(news), :class => "btn btn-warning") do %>
