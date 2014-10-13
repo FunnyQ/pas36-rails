@@ -20,7 +20,7 @@
               <%= link_to(edit_admin_about_path(about), :class => 'btn btn-warning') do %>
                 <i class="fa fa-edit"></i> 編輯
               <% end %>
-              <%= link_to(admin_about_path(about), :class => 'btn btn-danger', :method => :delete, confirm: 'Are you sure?') do %>
+              <%= link_to(admin_about_path(about), :class => 'btn btn-danger', :method => :delete, :data => {confirm: "您確定要刪除嗎？"}) do %>
                 <i class="fa fa-remove"></i> 刪除
               <% end %>
             </td>

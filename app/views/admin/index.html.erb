@@ -20,7 +20,7 @@
             <%= link_to(edit_admin_news_path(news), :class => "btn btn-warning") do %>
               <i class="fa fa-edit"></i> 編輯
             <% end %>
-            <%= link_to(admin_news_path(news), :class => "btn btn-danger", :confirm => "確定刪除這則新聞？", :method => :delete) do %>
+            <%= link_to(admin_news_path(news), :class => "btn btn-danger", :method => :delete, :data => {confirm: "您確定要刪除這則新聞嗎？"}) do %>
               <i class="fa fa-remove"></i> 刪除
             <% end %>
 
