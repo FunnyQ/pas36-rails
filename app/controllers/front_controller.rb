@@ -12,6 +12,14 @@ class FrontController < ApplicationController
 
   end
 
+  def courses
+
+  end
+
+  def activities
+
+  end
+
   def downloads
 
   end

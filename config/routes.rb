@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/about', :to => 'front#about'
   get '/spaces', :to => 'front#spaces'
   get '/downloads', :to => 'front#downloads'
+  get '/courses', :to => 'front#courses'
+  get '/activities', :to => 'front#activities'
 
 
 

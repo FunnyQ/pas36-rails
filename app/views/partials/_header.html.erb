@@ -60,12 +60,12 @@
           <!-- navi contents -->
           <li><%= link_to('關於我們', about_path)%></li>
           <li><%= link_to('場地租借', spaces_path)%></li>
-          <li><a class="" href="/courses.html">課程活動</a></li>
-          <li><a class="" href="/about.html#tour">參訪體驗</a></li>
-          <li><a class="" href="/activities.html">活動花絮</a></li>
-          <li><a class="" href="/about.html#hire">志工招募</a></li>
+          <li><%= link_to '課程活動', courses_path %></li>
+          <li><%= link_to '參訪體驗', about_path+'#tour' %></li>
+          <li><%= link_to '活動花絮', activities_path %></li>
+          <li><%= link_to '參訪體驗', about_path+'#hire' %></li>
           <li><a class="" href="/jyclass.html">景優專班</a></li>
-          <li><a class="" href="/download.html">下載專區</a></li>
+          <li><%= link_to '下載專區', downloads_path %></li>
         </ul>
       </nav>
     </div><!-- e/o navi bar -->
