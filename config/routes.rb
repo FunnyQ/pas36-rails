@@ -10,11 +10,12 @@ Rails.application.routes.draw do
 
   resources :news, :only => [:index, :show]
 
-  get '/about', :to => 'front#about'
-  get '/spaces', :to => 'front#spaces'
-  get '/downloads', :to => 'front#downloads'
-  get '/courses', :to => 'front#courses'
-  get '/activities', :to => 'front#activities'
+  match '/about', :to => 'front#about', :via => 'get'
+  match '/spaces', :to => 'front#spaces', :via => 'get'
+  match '/downloads', :to => 'front#downloads', :via => 'get'
+  match '/courses', :to => 'front#courses', :via => 'get'
+  match '/activities', :to => 'front#activities', :via => 'get'
+
 
 
 
@@ -25,14 +26,15 @@ Rails.application.routes.draw do
 
     # 首頁 Slider 管理
     resources :index_sliders, :only => [:edit, :destroy, :create, :update]
-    get '/index_sliders/new_image', :to => 'index_sliders#image'
-    get '/index_sliders/new_link', :to => 'index_sliders#link'
+    match 'index_sliders/new_image', :to => 'index_sliders#image', :via => 'get'
+    match 'index_sliders/new_link', :to => 'index_sliders#link', :via => 'get'
 
     # 首頁新聞管理
     resources :news, :only => [:new, :edit, :destroy, :create, :update]
 
     # 關於我們管理
     resources :abouts#, :only => [:edit, :index, :update]
+
   end
 
   # Example of regular route:

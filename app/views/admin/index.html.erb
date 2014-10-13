@@ -10,7 +10,7 @@
       <thead>
         <tr>
           <th>更新日期</th>
-          <th>Slider 內容</th>
+          <th class="text-center">Slider 內容</th>
           <th class="text-center">管理選項</th>
         </tr>
       </thead>
@@ -18,7 +18,7 @@
         <% @sliders.each do |slider| %>
         <tr>
           <td><%= slider.date_formate %></td>
-          <td><%= index_slider_content_admin(slider) %></td>
+          <td class="text-center"><%= index_slider_content_admin(slider) %></td>
           <td class="text-center">
             <%= link_to(edit_admin_index_slider_path(slider), :class => "btn btn-warning") do %>
               <i class="fa fa-edit"></i> 編輯
