@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: index_sliders
+#
+#  id         :integer          not null, primary key
+#  category   :string(255)
+#  link       :string(255)
+#  img        :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class IndexSlider < ActiveRecord::Base
 
   mount_uploader :img, IndexSliderUploader

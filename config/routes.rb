@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,14 +8,12 @@ Rails.application.routes.draw do
 
   # 前台
   root 'front#index'
-
-  resources :news, :only => [:index, :show]
-
   match '/about', :to => 'front#about', :via => 'get'
   match '/spaces', :to => 'front#spaces', :via => 'get'
   match '/downloads', :to => 'front#downloads', :via => 'get'
   match '/courses', :to => 'front#courses', :via => 'get'
   match '/activities', :to => 'front#activities', :via => 'get'
+  resources :news, :only => [:index, :show]
 
 
 
@@ -31,6 +30,9 @@ Rails.application.routes.draw do
 
     # 首頁新聞管理
     resources :news, :only => [:new, :edit, :destroy, :create, :update]
+
+    # 首頁小 Banner 管理
+    resource :banners, :only => [:new, :create, :edit, :update]
 
     # 關於我們管理
     resources :abouts#, :only => [:edit, :index, :update]

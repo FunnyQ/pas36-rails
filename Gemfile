@@ -37,12 +37,15 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development do
+  gem 'guard-livereload'
+  gem 'better_errors'
+  gem 'annotate'
+end
 
 gem 'compass-rails'
 gem 'bower-rails'
 gem 'modernizr-rails'
-gem 'better_errors'
-gem 'guard-livereload', group: :development
 gem 'simple_form'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
