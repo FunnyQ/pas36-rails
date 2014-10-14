@@ -1,5 +1,5 @@
   <%= simple_form_for [:admin, @banner] do |n| %>
-    <%= n.input :img, :label => "Banner 圖片" %>
+    <%= n.input :img, :label => "Banner 圖片（系統將會依比例自動裁切至 300 x 130）" %>
     <% if @banner.img? %>
       <div class="edit-cover">
         <h5>目前圖片</h5>

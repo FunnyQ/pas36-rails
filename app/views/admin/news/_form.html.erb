@@ -1,6 +1,6 @@
   <%= simple_form_for [:admin, @news] do |n| %>
     <%= n.input :title, :label => "標題" %>
-    <%= n.input :img, :label => "重點圖片", :as => :file %>
+    <%= n.input :img, :label => "重點圖片（系統將會依比例裁切至 200 x 200）", :as => :file %>
 
     <% if @news.img? %>
       <div class="edit-cover">
