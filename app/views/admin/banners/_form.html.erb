@@ -1,0 +1,13 @@
+  <%= simple_form_for [:admin, @banner] do |n| %>
+    <%= n.input :img, :label => "Banner 圖片" %>
+    <% if @banner.img? %>
+      <div class="edit-cover">
+        <h5>目前圖片</h5>
+        <%= image_tag @banner.img.url(:thumb) %>
+      </div>
+    <% end %>
+    <%= n.input :link, :label => "連結目標" %>
+    <br>
+    <%= n.button :submit, '送出資料', :class => "btn btn-primary pull-right" %>
+    <%= link_to( '取消', admin_index_path, :class => "btn btn-default pull-right") %>
+  <% end %>

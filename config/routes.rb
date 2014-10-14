@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   match '/downloads', :to => 'front#downloads', :via => 'get'
   match '/courses', :to => 'front#courses', :via => 'get'
   match '/activities', :to => 'front#activities', :via => 'get'
+  match '/contact', :to => 'front#contact', :via => 'get'
   resources :news, :only => [:index, :show]
 
 
@@ -32,7 +33,7 @@ Rails.application.routes.draw do
     resources :news, :only => [:new, :edit, :destroy, :create, :update]
 
     # 首頁小 Banner 管理
-    resource :banners, :only => [:new, :create, :edit, :update]
+    resources :banners#, :only => [:new, :create, :edit, :update]
 
     # 關於我們管理
     resources :abouts#, :only => [:edit, :index, :update]

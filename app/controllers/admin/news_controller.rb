@@ -11,8 +11,10 @@ class Admin::NewsController < ApplicationController
 
     if @news.save
       redirect_to admin_index_path
+      flash[:notice] = "已成功建立新聞！"
     else
       render :new
+      flash[:alert] = "新聞建立失敗，請您檢查後再試一次。"
     end
   end
 
@@ -25,8 +27,10 @@ class Admin::NewsController < ApplicationController
 
     if @news.update(news_params)
       redirect_to admin_index_path
+      flash[:notice] = "已成功更新新聞！"
     else
       render :edit
+      flash[:alert] = "新聞更新失敗，請您檢查後再試一次。"
     end
   end
 
@@ -34,6 +38,7 @@ class Admin::NewsController < ApplicationController
     @news = News.find(params[:id])
     @news.destroy
     redirect_to admin_index_path
+    flash[:notice] = "#{@news.title} 已刪除"
   end
 
   private

@@ -3,6 +3,7 @@ class FrontController < ApplicationController
   def index
     @news = News.all
     @sliders = IndexSlider.all
+    @banners = Banner.all
   end
 
   def about
@@ -22,6 +23,10 @@ class FrontController < ApplicationController
   end
 
   def downloads
+
+  end
+
+  def contact
 
   end
 

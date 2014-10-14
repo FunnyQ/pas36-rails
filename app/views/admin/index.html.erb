@@ -77,40 +77,34 @@
 
 <div class="container section-admin">
   <h3>Banner 管理</h3>
+  <%= link_to(new_admin_banner_path, :class => "btn btn-primary") do %>
+    <i class="fa fa-plus"></i> 新增 banner
+  <% end %>
   <table class="table table-hover">
       <thead>
         <tr>
           <th>更新日期</th>
-          <th>新聞標題</th>
-          <th>管理選項</th>
+          <th class="text-center">目前圖片</th>
+          <th class="text-center">連結目標</th>
+          <th class="text-center">管理選項</th>
         </tr>
       </thead>
       <tbody>
+        <% @banners.recent.each do |banner| %>
         <tr>
-          <td>1</td>
-          <td>秋日好養生，太極導引、菩提功夫禪系列課程健康招生中！</td>
-          <td><a href="#" class="btn btn-warning"><i class="fa fa-edit"></i> 編輯</a></td>
+          <td><%= banner.date_formate %></td>
+          <td class="text-center"><%= render_thumb(banner) %></td>
+          <td class="text-center"><%= banner.link %></td>
+          <td class="text-center">
+            <%= link_to(edit_admin_banner_path(banner), :class => "btn btn-warning") do %>
+              <i class="fa fa-edit"></i> 編輯
+            <% end %>
+            <%= link_to(admin_banner_path(banner), :class => "btn btn-danger", :method => :delete, :data => {confirm: "您確定要刪除這則新聞嗎？"}) do %>
+              <i class="fa fa-remove"></i> 刪除
+            <% end %>
+          </td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>2014文山藝術季即將熱鬧登場，快來參加臺北城南最精彩的藝文饗宴！</td>
-          <td><a href="#" class="btn btn-warning"><i class="fa fa-edit"></i> 編輯</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>2015 表演36房兒童禪鼓冬令營開始報名，名額有限 欲報從速！</td>
-          <td><a href="#" class="btn btn-warning"><i class="fa fa-edit"></i> 編輯</a></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>2015 表演36房兒童禪鼓冬令營開始報名，名額有限 欲報從速！</td>
-          <td><a href="#" class="btn btn-warning"><i class="fa fa-edit"></i> 編輯</a></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>2015 表演36房兒童禪鼓冬令營開始報名，名額有限 欲報從速！</td>
-          <td><a href="#" class="btn btn-warning"><i class="fa fa-edit"></i> 編輯</a></td>
-        </tr>
+        <% end %>
       </tbody>
     </table>
 </div>

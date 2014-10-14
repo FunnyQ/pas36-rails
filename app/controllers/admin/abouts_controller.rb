@@ -19,8 +19,10 @@ class Admin::AboutsController < ApplicationController
 
     if @abouts.save
       redirect_to admin_abouts_path
+      flash[:notice] = "已成功建立 #{@abouts.title}"
     else
       render :new
+      flash[:alert] = "#{@abouts.title} 並未順利建立，請您檢查後再試一次。"
     end
   end
 
@@ -33,8 +35,10 @@ class Admin::AboutsController < ApplicationController
 
     if @abouts.update(about_params)
       redirect_to admin_abouts_path
+      flash[:notice] = "#{@abouts.title} 已成功更新！"
     else
       render :edit
+      flash[:alert] = "#{@abouts.title} 並未順利更新，請您檢查後再試一次。"
     end
   end
 

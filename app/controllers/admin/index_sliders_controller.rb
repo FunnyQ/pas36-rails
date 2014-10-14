@@ -2,7 +2,6 @@ class Admin::IndexSlidersController < ApplicationController
 
   layout "admin"
 
-
   def image
     @slider = IndexSlider.new
   end
@@ -22,7 +21,7 @@ class Admin::IndexSlidersController < ApplicationController
       flash[:notice] = "已成功建立 Slider"
     else
       redirect_to :back
-      flash[:alart] = "Slider 建立失敗，請您確認欄位皆有填妥並再試一次。"
+      flash[:alert] = "Slider 建立失敗，請您確認欄位皆有填妥並再試一次。"
     end
   end
 
@@ -35,8 +34,10 @@ class Admin::IndexSlidersController < ApplicationController
 
     if @slider.update(index_sliders_params)
       redirect_to admin_index_path
+      flash[:notice] = "已成功更新！"
     else
       render :edit
+      flash[:alert] = "更新失敗，請您檢查後再試一次。"
     end
   end
 
@@ -44,6 +45,7 @@ class Admin::IndexSlidersController < ApplicationController
     @slider = IndexSlider.find(params[:id])
     @slider.destroy
     redirect_to admin_index_path
+    flash[:notice] = "Slider 已刪除！"
   end
 
   private

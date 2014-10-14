@@ -54,4 +54,16 @@ module ApplicationHelper
     %Q{<iframe class="video-wrapper" title="YouTube video player" src="http://www.youtube.com/embed/#{ youtube_id }?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>}
   end
 
+  def render_thumb(target)
+    image_tag target.img.url(:thumb)
+  end
+
+  def render_banner_link(target)
+    if target.link?
+      target.link
+    else
+      "#"
+    end
+  end
+
 end
